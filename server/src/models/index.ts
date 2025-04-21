@@ -21,4 +21,10 @@ const Ticket = TicketFactory(sequelize);
 User.hasMany(Ticket, { foreignKey: 'assignedUserId' });
 Ticket.belongsTo(User, { foreignKey: 'assignedUserId', as: 'assignedUser'});
 
+console.log("Database Config:", {
+  name: process.env.DB_NAME,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+});
 export { sequelize, User, Ticket };
