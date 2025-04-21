@@ -1,6 +1,8 @@
-#envirmomental variable
-.env 
+// Replace this:
+import bcrypt from 'bcrypt';
 
+// With this:
+import bcrypt from 'bcryptjs';
 # Logs
 logs
 *.log
